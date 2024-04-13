@@ -10,6 +10,8 @@ Amplify.configure(awsconfig);
 
 <ThemeProvider theme={studioTheme}>
 
+/var/folders/11/mwf52gz10x510jdwll_5pglh0000gn/T/SafePlate/report-1713033271198.zip
+
 function createProfile() {
     const name = document.getElementById('name').value;
     const age = document.getElementById('age').value;
