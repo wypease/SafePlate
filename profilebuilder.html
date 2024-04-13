@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafePlate App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SafePlate App</h1>
+        <img class="logo" src="/Users/wy/Desktop/SafePlate-main/image.png" alt="logo">
+        <form id="profileForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+
+            <label for="allergies">Allergies (comma-separated):</label>
+            <input type="text" id="allergies" required>
+        
+
+        <!-- Favorites Section -->
+        <div class="favorites">
+            <h2>Favorites</h2>
+            <label for="recipeName">Meal Names (comma-separated):</label>
+            <input type="text" id="recipeName" required>
+        
+            <label for="ingredients">Restaurants  (comma-separated):</label>
+            <textarea id="ingredients" rows="4" required></textarea>
+        
+            <label for="instructions">Ingredients (comma-separated):</label>
+            <textarea id="instructions" rows="6" required></textarea>
+
+        <button type="button" onclick="createProfile()">Create Profile</button>
+    </form>
+    <div id="profileResult" class="hidden">
+        <h2>User Profile:</h2>
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Age:</strong> <span id="profileAge"></span></p>
+        <p><strong>Allergies:</strong> <span id="profileAllergies"></span></p>
+    </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

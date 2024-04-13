@@ -1,29 +1,3 @@
-import { ThemeProvider } from "@aws-amplify/ui-react";
-import { Amplify } from 'aws-amplify';
-
-import awsconfig from './aws-exports';
-
-import "@aws-amplify/ui-react/styles.css";
-import { studioTheme } from "./ui-components";
-
-Amplify.configure(awsconfig);
-
-import { uploadData } from 'aws-amplify/storage';
-
-try {
-  const result = await uploadData({
-    key: filename,
-    data: file
-  }).result;
-  console.log('Succeeded: ', result);
-} catch (error) {
-  console.log('Error : ', error);
-}
-
-<ThemeProvider theme={studioTheme}>
-
-/var/folders/11/mwf52gz10x510jdwll_5pglh0000gn/T/SafePlate/report-1713033271198.zip
-
 function createProfile() {
     const name = document.getElementById('name').value;
     const age = document.getElementById('age').value;
@@ -117,4 +91,3 @@ function buildRecipe() {
     .then(response => response.json())
     .then(data => alert(data.message));
 }
-</ThemeProvider>
