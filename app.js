@@ -8,7 +8,7 @@ import { studioTheme } from "./ui-components";
 
 Amplify.configure(awsconfig);
 
-<ThemeProvider theme={studioTheme}></ThemeProvider>
+<ThemeProvider theme={studioTheme}>
 
 function createProfile() {
     const name = document.getElementById('name').value;
@@ -103,3 +103,4 @@ function buildRecipe() {
     .then(response => response.json())
     .then(data => alert(data.message));
 }
+</ThemeProvider>
