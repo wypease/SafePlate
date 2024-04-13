@@ -8,6 +8,18 @@ import { studioTheme } from "./ui-components";
 
 Amplify.configure(awsconfig);
 
+import { uploadData } from 'aws-amplify/storage';
+
+try {
+  const result = await uploadData({
+    key: filename,
+    data: file
+  }).result;
+  console.log('Succeeded: ', result);
+} catch (error) {
+  console.log('Error : ', error);
+}
+
 <ThemeProvider theme={studioTheme}>
 
 /var/folders/11/mwf52gz10x510jdwll_5pglh0000gn/T/SafePlate/report-1713033271198.zip
