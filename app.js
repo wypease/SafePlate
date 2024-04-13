@@ -8,6 +8,8 @@ import { studioTheme } from "./ui-components";
 
 Amplify.configure(awsconfig);
 
+<ThemeProvider theme={studioTheme}></ThemeProvider>
+
 function createProfile() {
     const name = document.getElementById('name').value;
     const age = document.getElementById('age').value;
